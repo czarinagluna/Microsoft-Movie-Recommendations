@@ -1,6 +1,8 @@
-# Title
+# Microsoft Movie Studio
+##### Business Recommendations
 
-**Authors**: Student1, Student2
+**Authors:** Valeria Viscarra Fossati, Olgert Hasko, Sally Heinzel, Czarina Luna 
+***
 
 ## Overview
 
