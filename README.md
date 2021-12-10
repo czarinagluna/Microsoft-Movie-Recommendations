@@ -3,18 +3,17 @@
 ### Repository Contents
 - Overview
 - Business Problem
-- Include stakeholder and key business questions
 - Data Understanding and Analysis
-- Source of data
-- Description of data
-- Three visualizations (the same visualizations presented in the slides and notebook)
+  - Source of data
+  - Description of data
+  - Visualizations 
 - Conclusion
 - Summary of conclusions including three relevant findings
 
 ### Overview
-Microsoft is creating a new movie studio. As it prepares to create original video content, it seeks to understand the film industry. We, the advisory team, explored movie production data to help Microsoft successfully launch its first film. We started by conducting a web scrape to extract two datasets containing all the relevant film information. We then merged our datasets and cleaned our data by turning certain strings into floats, adjusting dates to show more details, removing Null values, and adding a column for the rate of return based on the production budget and box office returns. Once the data was clean, we created plots to determine which genres had the highest rate of return, which release dates yielded the highest revenue by genre, and which runtimes were optimal for each genre. Based on the data, we determined that horror films yielded the highest rate of return. The best month to release a horror film is October, and the most optimal film length is 90-105 minutes.
+Microsoft is creating a new movie studio. As it prepares to create original video content, it seeks to understand the film industry. We, the advisory team, explored movie production data to help Microsoft successfully launch its first film. We started by conducting a web scrape to extract two datasets containing all the relevant film information. We then merged our datasets and cleaned our data by turning certain strings into integers, adjusting dates to show more details, removing Null values, and adding a column for the rate of return based on the production budget and box office returns. Once the data was clean, we created plots to determine which genres had the highest rate of return, which release dates yielded the highest revenue by genre, and which runtimes were optimal for each genre. Based on the data, we determined that horror films yielded the highest rate of return. The best month to release a horror film is October, and the most optimal film length is 90-105 minutes.
 
-### Data Analysis
+### Data Understanding & Analysis
 The available datasets included data from The Numbers and IMDb, online databases containing movie industry information. The Numbers data included variables necessary for our analysis, such as production budget and gross profits, while the IMDb data included other important variables, like genres. However, merging these datasets resulted in a significant loss of movies to analyze resulting from numerous unmatched values. Due to this loss, the advisory team acquired additional data by scraping The Numbers website. The complete chart (https://www.the-numbers.com/movie/budgets/all) consisted of all films in their database that includes financial information.
 
 The dataset contains a total of 6,100 films ranging over almost a hundred years, including films release this year, which is larger and more recent than the data set we initially had. It also contains the variables from the other data sets that we initially targeted. Therefore, the advisory team decided to use this data set for our analysis.
@@ -30,7 +29,7 @@ Given the domestic gross and worldwide gross, we used the worldwide box office r
 
 ![profits_vs_budget (1)](https://user-images.githubusercontent.com/79488205/145619111-0854a99e-dc7b-4f0b-94d4-31e481c0723d.png)
 
-We compared the profit ratio and production costs and foud that horror films yield the highest rate of return, resulting in a return of 3:1 profits versus production costs, compared to the 2:1 profit versus production cost ratio resulting from action and adventure movies. 
+We compared the profit ratio and production costs and found that horror films yield the highest rate of return, resulting in a return of 3:1 profits versus production costs, compared to the 2:1 profit versus production cost ratio resulting from action and adventure movies. 
 
 ![profits_per_genre (1)](https://user-images.githubusercontent.com/79488205/145619504-73caccde-482e-4c03-9bd4-54a436e6f389.png)
 
@@ -60,7 +59,7 @@ For that reason, one future course of inquiry would be to analyze the impact of 
 Another mode of inquiry would be to determine what the most critically acclaimed films are. Those with the highest reviews or most awards may not be the most profitable, but perhaps Microsoft wants to focus on establishing a reputation for quality films, especially as it builds its movie catalog. Proving its ability to make interesting and creative movies would likely attract popular and skilled film industry talent, thereby further increasing the quality of Microsoft’s movies and resulting in greater profitability.
 
 ### Repository Structure
-
+```
 
 ├── data
 |   ├── tngross.csv
@@ -83,3 +82,4 @@ Another mode of inquiry would be to determine what the most critically acclaimed
 │   ├── horror_count_years.png
 │   ├── horror_pe
 
+```
