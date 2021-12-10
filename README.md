@@ -60,7 +60,7 @@ For that reason, one future course of inquiry would be to analyze the impact of 
 Another mode of inquiry would be to determine what the most critically acclaimed films are. Those with the highest reviews or most awards may not be the most profitable, but perhaps Microsoft wants to focus on establishing a reputation for quality films, especially as it builds its movie catalog. Proving its ability to make interesting and creative movies would likely attract popular and skilled film industry talent, thereby further increasing the quality of Microsoft’s movies and resulting in greater profitability.
 
 ### Repository Structure
-
+```
 
 ├── data
 |   ├── tngross.csv
@@ -83,3 +83,4 @@ Another mode of inquiry would be to determine what the most critically acclaimed
 │   ├── horror_count_years.png
 │   ├── horror_pe
 
+```
