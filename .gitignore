@@ -1,0 +1,9 @@
+.Python
+
+.ipynb_checkpoints/*
+.ipynb_checkpoints
+
+profile_default/
+ipython_config.py
+.ipynb_checkpoints
+.DS_Store
