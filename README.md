@@ -1,71 +1,85 @@
-# Phase 1 Project Template - Minimum Viable Product (MVP)
+## Microsoft Studio Project
 
-![blueprint](images/blueprint.png)
+### Repository Contents
+- Overview
+- Business Problem
+- Include stakeholder and key business questions
+- Data Understanding and Analysis
+- Source of data
+- Description of data
+- Three visualizations (the same visualizations presented in the slides and notebook)
+- Conclusion
+- Summary of conclusions including three relevant findings
 
-This repository is like a blueprint, providing structure for your first End of Phase Project. We suggest you base your Phase 1 project off of this repository so you can focus less on formatting and organization, and more on the _analysis and communication skills_ that will support your progress through the course. This template is designed to make your project portfolio-ready in order to impress the future employers who will review it. 
+### Overview
+Microsoft is creating a new movie studio. As it prepares to create original video content, it seeks to understand the film industry. We, the advisory team, explored movie production data to help Microsoft successfully launch its first film. We started by conducting a web scrape to extract two datasets containing all the relevant film information. We then merged our datasets and cleaned our data by turning certain strings into floats, adjusting dates to show more details, removing Null values, and adding a column for the rate of return based on the production budget and box office returns. Once the data was clean, we created plots to determine which genres had the highest rate of return, which release dates yielded the highest revenue by genre, and which runtimes were optimal for each genre. Based on the data, we determined that horror films yielded the highest rate of return. The best month to release a horror film is October, and the most optimal film length is 90-105 minutes.
 
-## Repository Contents
+### Data Analysis
+The available datasets included data from The Numbers and IMDb, online databases containing movie industry information. The Numbers data included variables necessary for our analysis, such as production budget and gross profits, while the IMDb data included other important variables, like genres. However, merging these datasets resulted in a significant loss of movies to analyze resulting from numerous unmatched values. Due to this loss, the advisory team acquired additional data by scraping The Numbers website. The complete chart (https://www.the-numbers.com/movie/budgets/all) consisted of all films in their database that includes financial information.
 
-Below is a list of the contents of this repository - instructions for using them are in the next section.
+The dataset contains a total of 6,100 films ranging over almost a hundred years, including films release this year, which is larger and more recent than the data set we initially had. It also contains the variables from the other data sets that we initially targeted. Therefore, the advisory team decided to use this data set for our analysis.
 
-- `README.md`: The README for this repo branch explaining it's contents - you're reading it now
-- `TEMPLATE_README.md`: An example of a project README that provides a brief overview of your whole project
-- `dsc-phase1-project-template.ipynb`: A starter Jupyter Notebook with headings, code examples and guiding questions
-- `DS_Project_Presentation_Template.pdf`: A starter slide deck presenting your project - here is an [editable version](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy)
-- `data` folder: A folder for the data you reference with your code
-- `images` folder: A folder for the images you reference in your files 
-- `.gitignore`: A hidden file that tells git to not track certain files and folders
+We merged our two datasets together, creating a data set with the following variables:
 
-## Instructions For Using This Repository
+- Budget and gross figures to be used in finding profits and losses
+- Genres to be compared with one another
+- Release date to be sliced into day, month, and quarter of the years
+- Runtime in minutes to compare longer and shorter films
 
-### Fork This Repository
+Given the domestic gross and worldwide gross, we used the worldwide box office returns to analyze the correlation between production budget and overall profits. The resulting correlation was not strong enough to make a definitive conclusion aout the data. We decide to zoom in on how each genre performed instead.
 
-**For a group project**, have only one team member do these steps:
+![profits_vs_budget (1)](https://user-images.githubusercontent.com/79488205/145619111-0854a99e-dc7b-4f0b-94d4-31e481c0723d.png)
 
-1. Fork this repository to your personal account
-   - In GitHub, go to this repository and click the "Fork" button in the upper right
-   
-2. Change the name of your fork of this repo to a _descriptive_ name of your choosing
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Options" -> "Repository Name" -> "Rename"
-   - Make the name descriptive, since potential employers will read it. Ex: "Microsoft-Movie-Analysis" is better than "Project-1"
+We compared the profit ratio and production costs and foud that horror films yield the highest rate of return, resulting in a return of 3:1 profits versus production costs, compared to the 2:1 profit versus production cost ratio resulting from action and adventure movies. 
 
-3. Use `git clone` to clone your fork of this repo to your local computer
+![profits_per_genre (1)](https://user-images.githubusercontent.com/79488205/145619504-73caccde-482e-4c03-9bd4-54a436e6f389.png)
 
-4. **For a group project**, add team members as collaborators to your fork of this repo
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Manage Access" -> "Invite Teams or People"
-   - Add your project team members as collaborators & send them the repo GitHub URL
+After discovering that horror films yielded the highest return on investment, we took a look at the horror movies' performance and found that the popularity of horror films have increased over the past 40 forty years, making this an attractive genre on which to focus Microsoft’s resources. This analysis prompted us to explore the horror movies more closely to determine if there were discernible trends within this profitable genre.
 
-### Work In Your Fork Of This Repository
+![horror_count_years (1)](https://user-images.githubusercontent.com/79488205/145619564-a8446c33-f6e0-4234-a384-96f2621f7582.png)
 
-- Work in the repo clone that you created on your local machine
-- Start writing and coding in the Jupyter Notebook `dsc-phase1-project-template.ipynb`
-- Fill in the README template in `TEMPLATE_README.md`
-- Use `git add`, `git commit`, and `git push` often to update your repo in GitHub
-   - For a refresher on how to do this and why it's important, review Topic 2: Bash and Git
+![horror_count_profit (2)](https://user-images.githubusercontent.com/79488205/145619588-a2dd417f-a9b2-4465-b394-a07ce0aeffdc.png)
 
-### Use The Slide Template
+We looked at release dates to see if there was a certain time of year that was best to release horror movies. After separating profitable horror movies from unprofitable horror movies, we saw that October was the most popular month by count for profitable horror films to be released. September was the most popular month by count for unprofitable horror films to be released.
 
-1. Go to [this link](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy) to make an editable copy of the slide deck in your own Google Drive account
-2. Go to "Slide," select "Change Theme," and pick a theme you like so your presentation doesn't look like everyone else's
-3. **For a group project**, click the "Share" button and add your teammates as editors
+![horror_per_month (1)](https://user-images.githubusercontent.com/79488205/145619629-53b787e8-1913-4c15-aab2-d6a15e448319.png)
 
-### Tidy Up Your Project
+Going further, we also examined the runtime of profitable and unprofitable movies to see if there was a relationship to profitability. We chose to look at median runtimes in order to reduce the effect of outliers on our analysis. The median runtime of profitable movies is 107 minutes; for unprofitable movies, the median runtime is 103. This 4-minute difference doesn’t really tell us a lot, so we examined runtime by genre. We found that different genres have different median runtimes, with horror having a median runtime of 96 minutes. Calculating the interquartile range gives us a runtime of 90-105 minutes, which is a reasonable window for Microsoft to aim for their movies’ runtimes.
 
-- Change the file name of the Jupyter Notebook (`dsc-phase1-project-template.ipynb`) to something more descriptive
-- Save an appropriately-named PDF version of your slide deck to the repository
-- Rename the template readme you've been working in by running `git mv TEMPLATE_README.md README.md`
-- Delete unnecessary files from the repo using `git rm`
-   - The presentation PDF: `DS_Project_Presentation_Template.pdf`
-   - This README file: `README.md`
-   - Any unused data files in the `data` folder
-   - Any unused images in the `images` folder
+![movie_runtime (1)](https://user-images.githubusercontent.com/79488205/145619777-786681d3-a4e1-4a16-ac41-520c7200a139.png)
+![runtime_per_genre](https://user-images.githubusercontent.com/79488205/145619690-7d79d98d-3c63-42b0-ae6d-051538f2f648.png)
 
-### Submit Your Project
+Based on the findings from our data analysis, we recommend that Microsoft focus on producing films within the horror genre, as horror movies have the highest rate of return of any genre. Moreover, horror movies are increasing in popularity over the past 40 years, as evidenced by the number of releases by year.
 
-To submit your project, please follow the instructions in the "Project Submission & Review" page in the Milestones course.
+The most profitable month to release horror films is, perhaps unsurprisingly, in October. Of special note, our analysis revealed the least profitable month for horror films is September, so we urge Microsoft not to release a horror film until October begins. The median runtime for horror movies is 96 minutes, with the bulk spanning 90-105 minutes. We therefore recommend that Microsoft release horror films in October with a runtime between 90-105 minutes.
 
-***
-### Notes
+We do caution that this may not be a guarantee for success at Microsoft’s movie studio. For one, since Microsoft is just beginning to make films, it does not yet have an established reputation. This may make people wary of going to see their films initially. Additionally, movie quality is important. If the movies have uninspired plots, poor acting, and sloppy edits, they may not prove to be profitable.
 
-- The visualizations in the notebook use best practices for visualization that you should try to emulate. For example, they have clear axes, descriptive titles, and appropriate number formatting
-- The `dsc-phase1-project-template.ipynb` is intended to be the _final version_ of your project. The first notebook you create will not look like this. You are encouraged to start with a very disorderly notebook and clean it as you go
+For that reason, one future course of inquiry would be to analyze the impact of specific directors and actors on a movie’s profitability. Utilizing well-known and respected movie talent would likely increase people’s confidence in the film’s quality and give it a greater chance of ending up as a quality product.
+
+Another mode of inquiry would be to determine what the most critically acclaimed films are. Those with the highest reviews or most awards may not be the most profitable, but perhaps Microsoft wants to focus on establishing a reputation for quality films, especially as it builds its movie catalog. Proving its ability to make interesting and creative movies would likely attract popular and skilled film industry talent, thereby further increasing the quality of Microsoft’s movies and resulting in greater profitability.
+
+### Repository Structure
+
+
+├── data
+|   ├── tngross.csv
+|   ├── tnproduction.csv
+
+├── data_cleaning
+│   ├── check_for_duplicates.csv
+│   ├── czarina_release_date_analysis.ipynb
+│   └── olgert_earnings_vs_budget.ipynb
+│   ├── sally_runtime_correlations.ipynb
+│   └── valeria_genre_vs_profits.ipynb
+
+├── data_scraping
+│   ├── Scrape Numbers.ipynb
+│   ├── Scrape links.ipynb
+
+
+├── images
+│   ├── horror_count_profit.png
+│   ├── horror_count_years.png
+│   ├── horror_pe
+
