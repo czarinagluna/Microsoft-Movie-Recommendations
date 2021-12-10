@@ -3,18 +3,17 @@
 ### Repository Contents
 - Overview
 - Business Problem
-- Include stakeholder and key business questions
 - Data Understanding and Analysis
-- Source of data
-- Description of data
-- Three visualizations (the same visualizations presented in the slides and notebook)
+  - Source of data
+  - Description of data
+  - Visualizations 
 - Conclusion
 - Summary of conclusions including three relevant findings
 
 ### Overview
 Microsoft is creating a new movie studio. As it prepares to create original video content, it seeks to understand the film industry. We, the advisory team, explored movie production data to help Microsoft successfully launch its first film. We started by conducting a web scrape to extract two datasets containing all the relevant film information. We then merged our datasets and cleaned our data by turning certain strings into integers, adjusting dates to show more details, removing Null values, and adding a column for the rate of return based on the production budget and box office returns. Once the data was clean, we created plots to determine which genres had the highest rate of return, which release dates yielded the highest revenue by genre, and which runtimes were optimal for each genre. Based on the data, we determined that horror films yielded the highest rate of return. The best month to release a horror film is October, and the most optimal film length is 90-105 minutes.
 
-### Data Analysis
+### Data Understanding & Analysis
 The available datasets included data from The Numbers and IMDb, online databases containing movie industry information. The Numbers data included variables necessary for our analysis, such as production budget and gross profits, while the IMDb data included other important variables, like genres. However, merging these datasets resulted in a significant loss of movies to analyze resulting from numerous unmatched values. Due to this loss, the advisory team acquired additional data by scraping The Numbers website. The complete chart (https://www.the-numbers.com/movie/budgets/all) consisted of all films in their database that includes financial information.
 
 The dataset contains a total of 6,100 films ranging over almost a hundred years, including films release this year, which is larger and more recent than the data set we initially had. It also contains the variables from the other data sets that we initially targeted. Therefore, the advisory team decided to use this data set for our analysis.
