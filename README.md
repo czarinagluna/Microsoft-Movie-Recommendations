@@ -29,7 +29,7 @@ Given the domestic gross and worldwide gross, we used the worldwide box office r
 
 ![profits_vs_budget (1)](https://user-images.githubusercontent.com/79488205/145619111-0854a99e-dc7b-4f0b-94d4-31e481c0723d.png)
 
-We compared the profit ratio and production costs and foud that horror films yield the highest rate of return, resulting in a return of 3:1 profits versus production costs, compared to the 2:1 profit versus production cost ratio resulting from action and adventure movies. 
+We compared the profit ratio and production costs and found that horror films yield the highest rate of return, resulting in a return of 3:1 profits versus production costs, compared to the 2:1 profit versus production cost ratio resulting from action and adventure movies. 
 
 ![profits_per_genre (1)](https://user-images.githubusercontent.com/79488205/145619504-73caccde-482e-4c03-9bd4-54a436e6f389.png)
 
